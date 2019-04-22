@@ -9,11 +9,11 @@ import supply
 import random
 
 pygame.init()
-bg_size = width, height = 400, 700
+bg_size = width, height = 400, 800
 screen = pygame.display.set_mode(bg_size)
 pygame.display.set_caption("飞机大战")
 
-background = pygame.image.load("images/background.png").convert()
+background = pygame.image.load("images/background2.png").convert()
 
 BLACK = (0,0,0)
 GREEN = (0, 255, 0)
@@ -21,7 +21,7 @@ RED = (255, 0, 0)
 WHITE = (255,255,255)
 
 #载入游戏音乐
-pygame.mixer.music.load("sound/game_music.ogg")
+pygame.mixer.music.load("sound/bg_music.ogg.ogg")
 pygame.mixer.music.set_volume(0.2)
 bullet_sound = pygame.mixer.Sound("sound/bullet.wav")
 bullet_sound.set_volume(0.2)
@@ -156,10 +156,10 @@ def main():
 
     # 标志是否暂停游戏
     paused = False
-    paused_nor_image = pygame.image.load("images/pause_nor.png").convert_alpha()
-    pause_pressed_image = pygame.image.load("images/pause_pressed.png").convert_alpha()
-    resume_nor_image = pygame.image.load("images/resume_nor.png").convert_alpha()
-    resume_pressed_image = pygame.image.load("images/resume_pressed.png").convert_alpha()
+    paused_nor_image = pygame.image.load("images/close.png").convert_alpha()
+    pause_pressed_image = pygame.image.load("images/close.png").convert_alpha()
+    resume_nor_image = pygame.image.load("images/open.png").convert_alpha()
+    resume_pressed_image = pygame.image.load("images/open.png").convert_alpha()
     paused_rect = paused_nor_image.get_rect()
     paused_rect.left, paused_rect.top = width - paused_rect.width -10, 10
     paused_image = paused_nor_image
